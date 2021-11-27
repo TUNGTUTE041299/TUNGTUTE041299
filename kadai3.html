@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>繰り返し処理</title>
+<style>
+            table {
+                border-collapse: collapse;
+            }
+            td, th {
+                border: solid 1px #000000;
+                width: 70px;
+                padding: 5px;
+                text-align: center;
+            }
+            th {
+                background-color: #99CCCC;
+            }
+</style>
+</head>
+<body onload="createTable()">
+    <h1>九九の表</h1>
+    <table>
+        <thead id="t_head"></thead>
+        <tbody id="t_body"></tbody>
+    </table>
+
+    <script>
+        function createTable() {
+            var hoaqua = ['','りんご','ぶどう','レモン']
+            var thang = ['5月','6月','7月'];
+            let row = '<tr><th></th>';
+            for(let j = 0 ; j < thang.length ;j++){
+                row = row + '<th>' +thang[j] +' </th>';
+            }
+            row = row + '</tr>';
+            console.log(row);
+            document.getElementById('t_head').insertAdjacentHTML('beforeend',row);
+            for (let i = 1; i <hoaqua.length; i++){
+                 let row = '<tr><th>' + hoaqua[i] + '</th>';
+                     for (let j = 1; j <=3; j++) {
+                         row = row +  '<td>' +((i*j)-1)+ 'こ' + '</td>';                      
+                     }
+                    row = row + '</tr>';
+                     document.getElementById('t_body').insertAdjacentHTML('beforeend',row);
+             }
+        }
+        
+    </script>
+</body>
+</html>
