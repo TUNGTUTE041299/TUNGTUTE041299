@@ -13,11 +13,11 @@
         1から50までの数字の 「偶数」を縦に表示しなさい。 
 
     </p>
-    <button onclick="chan()">奇数を表示</button>
-    <button onclick="le()">偶数を表示</button>
+    <button onclick="oddNumber()">奇数を表示</button>
+    <button onclick="evenNumber()">偶数を表示</button>
     <p id="demso"></p>
 <script>
-    function chan() {
+    function evenNumber() {
         let text=0;        
       for (let index = 1; index <=50; index++) {
           if (index %2 != 0 ) {continue;}
@@ -26,7 +26,7 @@
         document.getElementById('demso').innerHTML=text;
         console.log(text);
     }    
-    function le() {
+    function oddNumber() {
         let text = 0;
       for (let index = 1; index <=50; index++) {
           if (index %2 == 0) {continue;}
