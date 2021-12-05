@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>処理の中断</h1>
+    <p>
+        for と continue を使用して1から50までの数字の「奇数」
+        を縦に表示 しなさい。 また、for と continue を使用して
+        1から50までの数字の 「偶数」を縦に表示しなさい。 
+
+    </p>
+    <button onclick="chan()">奇数を表示</button>
+    <button onclick="le()">偶数を表示</button>
+    <p id="demso"></p>
+<script>
+    function chan() {
+        let text=0;        
+      for (let index = 1; index <=50; index++) {
+          if (index %2 != 0 ) {continue;}
+         text =text + index +'</br>';          
+      }
+        document.getElementById('demso').innerHTML=text;
+        console.log(text);
+    }    
+    function le() {
+        let text = 0;
+      for (let index = 1; index <=50; index++) {
+          if (index %2 == 0) {continue;}
+        text =text+ index +'</br>';          
+      }
+        document.getElementById('demso').innerHTML=text;
+        console.log(text);
+    }    
+</script>    
+</body>
+</html>
