@@ -27,7 +27,7 @@
 
     <script>
         function createTable() {
-            var hoaqua = ['','りんご','ぶどう','レモン']
+            var hoaqua = ['りんご','ぶどう','レモン']
             var thang = ['5月','6月','7月'];
             let row = '<tr><th></th>';
             for(let j = 0 ; j < thang.length ;j++){
@@ -36,10 +36,10 @@
             row = row + '</tr>';
             console.log(row);
             document.getElementById('t_head').insertAdjacentHTML('beforeend',row);
-            for (let i = 1; i <hoaqua.length; i++){
+            for (let i = 0; i <hoaqua.length; i++){
                  let row = '<tr><th>' + hoaqua[i] + '</th>';
-                     for (let j = 1; j <=3; j++) {
-                         row = row +  '<td>' +((i*j)-1)+ 'こ' + '</td>';                      
+                     for (let j = 0; j <3; j++) {
+                         row = row +  '<td>' +((i+j)+(i*2))+ 'こ' + '</td>';                      
                      }
                     row = row + '</tr>';
                      document.getElementById('t_body').insertAdjacentHTML('beforeend',row);
